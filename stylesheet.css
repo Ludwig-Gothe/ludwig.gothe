@@ -132,7 +132,6 @@ header {
 .footer-content {
    display: flex;
    justify-content: space-around;
-   align-items: center;
    gap: 2rem;
 }
 
@@ -149,6 +148,48 @@ header {
    text-decoration: underline;
 }
 
+.footer-nav {
+   margin-right: 10px;
+}
+
 .footer-nav .button {
    margin: 0 10px 10px 0;
+   text-align: center;
+}
+
+/* Editing the little copyright text at the bottom of the page */
+.copyright {
+   margin: 20px auto 20px auto;
+   padding: 20px 0 0 0;
+   border-top: 1px solid var(--border);
+   width: 60%;
+}
+
+/* Media query for small screens */
+@media (max-width: 721px) {
+   .footer-content {
+      flex-direction: column;
+      align-items: center;
+   }
+   .contact-info {
+      margin: 10px 0 0 0;
+   }
+   .contact-info h5 {
+      text-align: center;
+      margin: 0;
+   }
+   .contact-info p {
+      margin: 20px 0 0 0;
+   }
+   .footer-nav {
+      margin: 10px 0 10px 0;
+   }
+   .footer-nav h5 {
+      text-align: center;
+      margin: 0 0 20px 0;
+   }
+   .footer-nav .button {
+      margin: 0 0 10px 0;
+      width: 60%;
+   }
 }
