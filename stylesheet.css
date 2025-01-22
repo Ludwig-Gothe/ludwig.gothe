@@ -11,8 +11,7 @@
 
 /* Settings for the hamburger-menu icon */
 .hamburger {
-   display: none; /* Keep button hidden as standard */
-   background-color: #ffb300;
+   background-color: #ffb300 !important;
    color: white; /* Text/icon color setting */
    border: none;
    font-size: 2em; /* Size settings for text/icon */
@@ -23,11 +22,19 @@
    z-index: 1001;
    width: 50px; /* Menu-button width */
    height: 50px; /* Menu-button height */
-   display: flex;
+   display: flex; /* Ensure button remains centered horizontally and vertically */
    justify-content: center;
    align-items: center;
    position: relative; /* Set relative positioning to align under the logo */
    top: 10px; /* Adjust this value as needed to place it under the logo */
+}
+
+.hamburger i {
+   transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for transform and color changes */
+}
+
+.hamburger i.fa-xmark {
+   transform: rotate(90deg); /* Rotate the X icon for added effect */
 }
 
 /* Basic layout settings for the <header> */
@@ -54,11 +61,14 @@ header {
 
 /* Media query for small screens */
 @media (max-width: 720px) {
+   .logo img {
+      width: 200px; /* Adjust logo size for smaller screens */
+   }
    .menu {
       display: none; /* Keep standard menu hidden on small screens */
       flex-direction: column; /* Turn menu vertically */
-      justify-content: center;
-      align-items: center;
+      justify-content: center; /* Center the menu vertically */
+      align-items: center; /* Center the items horizontally */
       position: fixed;
       top: 0;
       left: 0;
@@ -76,14 +86,22 @@ header {
 
    /* Show hamburger button on small screens */
    .hamburger {
-      display: flex; /* Show hamburger button */
+      display: flex; /* Show the button on smaller screens */
    }
 
-   /* Menu links - Adjust the design inside the hamburger menu */
+   /* Adjust margin between the hamburger button and the first link */
+   .menu li:first-child {
+      margin-top: 200px; /* Extra space before the first menu item */
+   }
+
+   /* Adjust margin between other menu items */
    .menu li {
-      margin: 10px 0; /* Space between menu items */
+      width: 50%; /* Make the menu items a fixed width (80% of the screen width) */
+      text-align: center; /* Center the text inside the link */
+      margin: 15px 0; /* Space between menu items */
    }
 
+   /* Menu links design inside the hamburger menu */
    .menu li a {
       color: white; /* Text color */
       text-decoration: none; /* Remove underline */
@@ -107,11 +125,6 @@ header {
 @media (min-width: 721px) {
    .hamburger {
       display: none; /* Hide hamburger button on larger screens */
-   }
-
-   .menu {
-      display: flex; /* Show menu horizontally */
-      justify-content: center;
    }
 }
 
