@@ -1,8 +1,10 @@
+/* Options for size and padding of the logo img. */
 .logo img {
    width: 300px;
    padding: 30px 0 10px 0;
 }
 
+/* Here I edit contents within the footer. */
 .footer-content {
    display: flex;
    justify-content: space-around;
