@@ -10,21 +10,19 @@
 }
 
 .logo-text {
-   background-color: white; /* Background color for the block */
-   color: transparent; /* Make the text itself transparent */
-   font-size: 10vw; /* Responsive font size for larger text */
-   font-weight: bold; /* Bold text for emphasis */
+   background-color: white; /* The block's background color */
+   color: black; /* Text color used for the cutout effect */
+   font-size: 10vw; /* Responsive font size */
+   font-weight: bold; /* Bold for better visibility */
    margin: 0 auto; /* Center the block horizontally */
-   padding: 10px; /* Add some padding around the text */
-   width: 50%; /* Set the block's width */
+   padding: 20px; /* Add padding to the block */
+   width: fit-content; /* Let the block wrap around the text */
    text-align: center; /* Center the text inside the block */
-   position: absolute; /* Position the block precisely */
-   top: 50%; /* Center the block vertically */
-   left: 50%; /* Center the block horizontally */
-   transform: translate(-50%, -50%); /* Adjust for perfect centering */
-   -webkit-background-clip: text; /* Clip the background to the text's shape (Webkit browsers) */
-   background-clip: text; /* Clip the background to the text's shape (modern browsers) */
-   -webkit-text-fill-color: transparent; /* Make the text itself transparent */
+   position: relative; /* Ensure the text block is positioned relative to itself */
+   mix-blend-mode: destination-out; /* Cut out the text */
+   -webkit-background-clip: text; /* Clip the block's background to the text */
+   background-clip: text; /* Clip the background for modern browsers */
+   -webkit-text-fill-color: transparent; /* Make the text transparent */
 }
 
 /* Settings for the hamburger-menu icon */
