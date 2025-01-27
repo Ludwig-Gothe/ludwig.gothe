@@ -10,19 +10,21 @@
 }
 
 .logo-text {
-   background-color: white;
-   color: black;
-   font-size: 10vw; /* Responsive font size */
-   font-weight: bold;
-   margin: 0 auto; /* Center the text container */
-   padding: 10px;
-   width: 50%;
-   text-align: center; /* Center text */
-   position: absolute; /* Position text */
-   top: 50%; /* Position text in the middle */
-   left: 50%; /* Position text in the middle */
-   transform: translate(-50%, -50%); /* Position text in the middle */
-   mix-blend-mode: screen; /* This makes the cutout text possible */
+   background-color: white; /* Background color for the block */
+   color: transparent; /* Make the text itself transparent */
+   font-size: 10vw; /* Responsive font size for larger text */
+   font-weight: bold; /* Bold text for emphasis */
+   margin: 0 auto; /* Center the block horizontally */
+   padding: 10px; /* Add some padding around the text */
+   width: 50%; /* Set the block's width */
+   text-align: center; /* Center the text inside the block */
+   position: absolute; /* Position the block precisely */
+   top: 50%; /* Center the block vertically */
+   left: 50%; /* Center the block horizontally */
+   transform: translate(-50%, -50%); /* Adjust for perfect centering */
+   -webkit-background-clip: text; /* Clip the background to the text's shape (Webkit browsers) */
+   background-clip: text; /* Clip the background to the text's shape (modern browsers) */
+   -webkit-text-fill-color: transparent; /* Make the text itself transparent */
 }
 
 /* Settings for the hamburger-menu icon */
