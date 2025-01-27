@@ -10,19 +10,18 @@
 }
 
 .logo-text {
-   background-color: white; /* The block's background color */
-   color: black; /* Text color used for the cutout effect */
+   background-color: white; /* The block's solid background color */
+   background-clip: text; /* Clip the block's background to the shape of the text */
+   -webkit-background-clip: text; /* Same for WebKit browsers */
+   -webkit-text-fill-color: transparent; /* Make the text itself transparent */
+   color: transparent; /* Ensure the text doesn't have a default color */
    font-size: 10vw; /* Responsive font size */
-   font-weight: bold; /* Bold for better visibility */
+   font-weight: bold; /* Bold for better emphasis */
    margin: 0 auto; /* Center the block horizontally */
-   padding: 20px; /* Add padding to the block */
-   width: fit-content; /* Let the block wrap around the text */
-   text-align: center; /* Center the text inside the block */
-   position: relative; /* Ensure the text block is positioned relative to itself */
-   mix-blend-mode: destination-out; /* Cut out the text */
-   -webkit-background-clip: text; /* Clip the block's background to the text */
-   background-clip: text; /* Clip the background for modern browsers */
-   -webkit-text-fill-color: transparent; /* Make the text transparent */
+   padding: 20px; /* Padding around the text */
+   width: fit-content; /* The block wraps tightly around the text */
+   text-align: center; /* Center text inside the block */
+   position: relative; /* Ensures positioning respects its own boundaries */
 }
 
 /* Settings for the hamburger-menu icon */
