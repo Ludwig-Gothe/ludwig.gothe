@@ -9,7 +9,7 @@
    margin-right: auto; /* Centers the logo horizontally */
 }
 
-.text {
+.logo-text {
    background-color: white;
    color: black;
    font-size: 10vw; /* Responsive font size */
