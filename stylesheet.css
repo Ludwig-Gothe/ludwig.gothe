@@ -12,7 +12,7 @@
 .logo-container {
    position: relative;
    display: inline-block;
-   background-color: white; /* The solid color of the block */
+   background-color: white; /* This is the visible block */
    padding: 20px 40px;
 }
 
@@ -20,11 +20,14 @@
    font-size: 10vw;
    font-weight: bold;
    text-align: center;
-   color: transparent; /* Ensure the text itself is invisible */
-   -webkit-background-clip: text;
-   background-clip: text;
-   background-color: black; /* This will be cut out */
-   mix-blend-mode: multiply; /* Allows header background to show through */
+   color: black; /* Fallback */
+   position: relative;
+
+   /* The key part: mask-image creates the cutout effect */
+   -webkit-mask-image: linear-gradient(black, black);
+   mask-image: linear-gradient(black, black);
+   -webkit-mask-composite: destination-out;
+   mask-composite: exclude;
 }
 
 /* Settings for the hamburger-menu icon */
