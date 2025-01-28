@@ -9,19 +9,31 @@
    margin-right: auto; /* Centers the logo horizontally */
 }
 
+.logo-container {
+   position: relative;
+   display: inline-block; /* Wrap the content */
+}
+
 .logo-text {
-   background-color: white; /* The solid block color */
    font-size: 10vw;
    font-weight: bold;
    padding: 20px 40px;
-   width: fit-content;
    text-align: center;
+   color: black; /* Fallback text color */
    position: relative;
+   z-index: 2; /* Ensure text is above background */
+   mix-blend-mode: destination-out; /* Creates the cutout effect */
+}
 
-   /* Create the cutout effect */
-   -webkit-mask-image: linear-gradient(black, black);
-   mask-image: linear-gradient(black, black);
-   -webkit-text-fill-color: transparent; /* Makes the text fully transparent */
+.logo-bg {
+   background-color: white; /* The block color */
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   z-index: 1;
+   content: "";
 }
 
 /* Settings for the hamburger-menu icon */
