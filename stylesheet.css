@@ -10,18 +10,16 @@
 }
 
 .logo-text {
-   background-color: white; /* The block's solid background color */
-   background-clip: text; /* Clip the block's background to the shape of the text */
-   -webkit-background-clip: text; /* Same for WebKit browsers */
-   -webkit-text-fill-color: transparent; /* Make the text itself transparent */
-   color: transparent; /* Ensure the text doesn't have a default color */
+   background-color: white; /* The block's solid background color (changeable) */
+   color: black; /* Fallback color */
    font-size: 10vw; /* Responsive font size */
-   font-weight: bold; /* Bold for better emphasis */
-   margin: 0 auto; /* Center the block horizontally */
-   padding: 20px; /* Padding around the text */
-   width: fit-content; /* The block wraps tightly around the text */
-   text-align: center; /* Center text inside the block */
-   position: relative; /* Ensures positioning respects its own boundaries */
+   font-weight: bold;
+   margin: 0 auto;
+   padding: 20px 40px;
+   width: fit-content;
+   text-align: center;
+   position: relative;
+   mix-blend-mode: difference; /* Makes text act as a "cutout" */
 }
 
 /* Settings for the hamburger-menu icon */
