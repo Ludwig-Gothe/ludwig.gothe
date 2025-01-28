@@ -10,16 +10,17 @@
 }
 
 .logo-text {
-   background-color: white; /* The block's solid background color (changeable) */
-   color: black; /* Fallback color */
-   font-size: 10vw; /* Responsive font size */
+   background-color: white;
+   color: black;
+   font-size: 10vw;
    font-weight: bold;
    margin: 0 auto;
    padding: 20px 40px;
    width: fit-content;
    text-align: center;
    position: relative;
-   mix-blend-mode: difference; /* Makes text act as a "cutout" */
+   mix-blend-mode: difference;
+   isolation: isolate; /* Prevents blending from affecting the block itself */
 }
 
 /* Settings for the hamburger-menu icon */
