@@ -10,17 +10,18 @@
 }
 
 .logo-text {
-   background-color: white;
-   color: black;
+   background-color: white; /* The solid block color */
    font-size: 10vw;
    font-weight: bold;
-   margin: 0 auto;
    padding: 20px 40px;
    width: fit-content;
    text-align: center;
    position: relative;
-   mix-blend-mode: difference;
-   isolation: isolate; /* Prevents blending from affecting the block itself */
+
+   /* Create the cutout effect */
+   -webkit-mask-image: linear-gradient(black, black);
+   mask-image: linear-gradient(black, black);
+   -webkit-text-fill-color: transparent; /* Makes the text fully transparent */
 }
 
 /* Settings for the hamburger-menu icon */
