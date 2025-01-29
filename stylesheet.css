@@ -11,23 +11,21 @@
 
 .logo-container {
    position: relative;
-   display: inline-block;
-   background-color: white; /* This is the visible block */
-   padding: 20px 40px;
+   display: inline-block; /* Adjusts width to content */
+   padding: 20px;
 }
 
 .logo-text {
+   background-color: white; /* Ensures text cutout works */
+   color: black; /* Fallback color */
    font-size: 10vw;
    font-weight: bold;
+   margin: 0 auto;
+   padding: 10px;
+   width: 50%;
    text-align: center;
-   color: black; /* Fallback */
-   position: relative;
-
-   /* The key part: mask-image creates the cutout effect */
-   -webkit-mask-image: linear-gradient(black, black);
-   mask-image: linear-gradient(black, black);
-   -webkit-mask-composite: destination-out;
-   mask-composite: exclude;
+   mix-blend-mode: screen; /* Creates the cutout effect */
+   position: relative; /* Keeps it in the normal document flow */
 }
 
 /* Settings for the hamburger-menu icon */
