@@ -10,8 +10,6 @@
 }
 
 .logo-container {
-   /* position: relative;
-   display: inline-block; /* Adjusts width to content */
    padding: 20px;
 }
 
@@ -21,12 +19,8 @@
    font-size: 10vw;
    font-weight: bold;
    letter-spacing: 6px;
-   /* margin: 0 auto; */
    padding: 0 60px 10px 60px;
-   /* width: 100%;
-   text-align: center; */
    mix-blend-mode: screen; /* Creates the cutout effect */
-   /* position: relative; /* Keeps it in the normal document flow */
 }
 
 /* Settings for the hamburger-menu icon */
