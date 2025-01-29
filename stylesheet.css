@@ -20,9 +20,10 @@
    color: black; /* Fallback color */
    font-size: 10vw;
    font-weight: bold;
+   letter-spacing: 4px;
    margin: 0 auto;
-   padding: 10px;
-   width: 50%;
+   padding: 0 60px 10px 60px;
+   width: 100%;
    text-align: center;
    mix-blend-mode: screen; /* Creates the cutout effect */
    position: relative; /* Keeps it in the normal document flow */
