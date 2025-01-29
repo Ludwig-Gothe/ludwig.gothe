@@ -15,6 +15,7 @@
 
 .logo-text {
    background-color: white; /* Ensures text cutout works */
+   /* background-color: var(--accent); */ /* Code for using Simple.css var --accent (root) color as background. */
    color: black; /* Fallback color */
    font-size: 10vw;
    font-weight: bold;
