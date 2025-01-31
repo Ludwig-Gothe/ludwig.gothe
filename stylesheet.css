@@ -20,7 +20,7 @@
    font-size: 10vw;
    font-weight: bold;
    letter-spacing: 6px;
-   padding: 0 60px 10px 60px;
+   padding: 0 60px 0 60px;
    mix-blend-mode: screen; /* Creates the cutout effect */
 }
 
